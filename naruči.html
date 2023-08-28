@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Burger Joint</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="icon" href="slike/logo.png" />
+		<script type="text/javascript" src="javascript.js"></script>
+	</head>
+	
+	<body>
+		<header>
+			<img id="logo" src="slike/logo.png" />
+			<p id="ime">Burger Joint</p>
+			
+			<nav>
+				<ul>
+					<li><a href="https://www.instagram.com" target="_blank"><img src="slike/instagram.png" /></a></li>
+					<li><a href="https://www.facebook.com" target="_blank"><img src="slike/facebook.png" /></a></li>
+					<li><a href="https://www.twitter.com" target="_blank"><img src="slike/twitter.png" /></a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<main>
+		
+			<nav>
+				<ul id="tabovi">
+					<li><a href="index.html">POČETNA</a></li>
+					<li><a href="meni.html">MENI</a></li>
+					<li class="active"><a href="#">NARUČI</a></li>
+					<li><a href="porudzbine.php">PORUDŽBINE</a></li>
+				</ul>
+			</nav>
+			
+			<div id="naruci">
+				<h1>NARUČIVANJE</h1>
+				<br/>
+				<form name="narucivanje" method="POST" action="potvrda.php" target="_blank">
+					<input type="text" name="naziv" id="naziv" placeholder="Ime i prezime" onkeyup="proveraNaziv()"/><br/><br/>
+					<input type="text" name="adresa" id="adresa" placeholder="Adresa" onkeyup="proveraAdresa()"/><br/><br/>
+					<input type="text" name="telefon" id="telefon" placeholder="Telefon" onkeyup="proveraTelefon()"/><br/><br/>
+					<input type="email" name="email" id="email" placeholder="E-Mail" onkeyup="proveraEmail()"/><br/><br/>
+					Izaberite obrok <br/><br/>
+					<select id="obrok" name="obrok">
+						<option value="Caesar Beef Burger|620"> Caesar Beef Burger - 620 DIN</option>
+						<option value="Grander Meni|700"> Grander Meni - 700 DIN</option>
+						<option value="Dečiji Meni|450"> Dečiji Meni - 450 DIN</option>
+						<option value="Twister Sendvič|390"> Twister Sendvič - 390 DIN</option>
+						<option value="Caesar salata pohovana|540"> Caesar salata pohovana - 540 DIN</option>
+						<option value="Kolač sa jabukama|390"> Kolač sa jabukama - 390 DIN</option>
+						<option value="Magnifico Tiramisu|390"> Magnifico Tiramisu - 390 DIN</option>
+						<option value="Grander sendvič|490"> Grander sendvič - 490 DIN</option>
+						<option value="Wrap Crispy Chicken|440"> Wrap Crispy Chicken - 440 DIN</option>
+						<option value="Triple Cheeseburger|440"> Triple Cheeseburger - 440 DIN</option>
+						<option value="Tost sa šunkom i sirom|190"> Tost sa šunkom i sirom - 190 DIN</option>
+						<option value="Double Royal Burger|350"> Double Royal Burger - 350 DIN</option>
+						<option value="Classic kobasica|340"> Classic kobasica - 340 DIN</option>
+						<option value="Šejk čokolada|200"> Šejk čokolada - 200 DIN</option>
+					</select><br/><br/>
+					<input type="number" name="kolicina" id="kolicina" min="1" placeholder="Količina"/><br/><br/>
+					Izaberite način plaćanja<br/><br/>
+					<input type="radio" name="placanje" id="kartica" value="Kreditna kartica" checked onclick="toggleVisibility()"/> Kartica 
+					<input type="radio" name="placanje" id="kes" value="Gotovinski" onclick="toggleVisibility()"/> Gotovinski<br/><br/>
+					<input type="text" name="kreditna" id="kreditna" placeholder="Broj kreditne kartice"  onkeyup="proveraKreditna()"/> <br/><br/>
+					<input type="text" name="kod" id="kod" placeholder="Sigurnosni kod"  onkeyup="proveraKod()"/> <br/><br/>
+					<input type="text" name="datum" id="datum" placeholder="Datum isteka eg. 1/22"  onkeyup="proveraDatum()"/> <br/><br/>
+					<input type="submit" name="potvrdi" id="potvrdi" value="Naručite"/>
+				
+				</form>
+			</div>
+		
+		</main>
+		
+		<footer>
+			Igor Mišić 2019201487 | Univerzitet Singidunum
+		</footer>
+	</body>
+	
+	
+</html>
